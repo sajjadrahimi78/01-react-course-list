@@ -1,4 +1,4 @@
-import CourseCard from "./CourseCard";
+import CourseCart from "./CourseCart";
 
 const courses = [
   {
@@ -19,7 +19,7 @@ const courses = [
     imageUrl: "/images/img2.jpg",
     rate: "4",
     tags: ["UI/UX design", "web design"],
-    start: "2023-07-01T20:46:30.615Z",
+    start: "2023-07-22T20:46:30.615Z",
     status: "Upcoming",
   },
   {
@@ -30,16 +30,17 @@ const courses = [
     imageUrl: "/images/img3.jpg",
     rate: "3.9",
     tags: ["Marketing", "Finance"],
-    start: "2023-07-01T20:46:30.615Z",
+    start: "2022-04-03T20:46:30.615Z",
     status: "Active",
   },
 ];
 
 function CourseList() {
   return (
-    <div className="course-list">
-      {courses.length > 0 &&
-        courses.map((course) => <CourseCard key={course.id} course={course} />)}
+    <div className="coutse-list">
+      {courses.map((course) => {
+        return <CourseCart  course={course} key={course.id}/>;
+      })}
     </div>
   );
 }
